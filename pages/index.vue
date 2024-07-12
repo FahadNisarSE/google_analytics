@@ -97,27 +97,6 @@ const fetchAnalyticsData = async () => {
   }
 }
 
-const fetchPropertyDetails = async () => {
-  try {
-    // const response = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/324211048:runReport`, {
-    const response = await fetch(`https://analyticsadmin.googleapis.com/v1beta/properties/449137298`, {
-      headers: {
-        'Authorization': `Bearer ${session.accessToken}`
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error(`Error fetching web properties: ${response.status} - ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching web properties:', error);
-    throw error;
-  }
-};
-
 async function getActiveUserWeekly() {
   try {
     const result = await $fetch(`https://analyticsdata.googleapis.com/v1beta/${propertyId.value}:runReport`, {
