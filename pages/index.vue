@@ -197,8 +197,6 @@ async function getActiveUserByCountry() {
       <button @click="signOut()" class="px-4 py-2 text-gray-900 bg-white rounded cursor-pointer">Sign out</button>
       <button @click="fetchAnalyticsData()" class="px-4 py-2 text-gray-900 bg-white rounded cursor-pointer">Fetch
         Account Summary</button>
-      <button @click="fetchPropertyDetails()" class="px-4 py-2 text-gray-900 bg-white rounded cursor-pointer">Fetch
-        Property Details</button>
       <button @click="getActiveUserWeekly()" class="px-4 py-2 text-gray-900 bg-white rounded cursor-pointer">Get Active
         User Weekly</button>
       <button @click="getActiveUserByCountry()" class="px-4 py-2 text-gray-900 bg-white rounded cursor-pointer">Get
